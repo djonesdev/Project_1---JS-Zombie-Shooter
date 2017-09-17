@@ -1,0 +1,212 @@
+body {
+	background-color: #333;
+}
+#box {
+	height: 100px;
+	width: 295px;
+	background-color: black;
+	color: white;
+	font-size: 1.3em;
+}
+
+#gameStart {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    height: 50px;
+    width: 280px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+
+#gameStart:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#message {
+  background: black;
+  display: none;
+  padding: 10px;
+  width: 280px;
+  height: 600px;
+  border-radius: 3%;
+  color: white;
+}
+
+#box {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#box:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+#musicButton {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	bottom: 5%;
+
+}
+
+#zombie1 {
+	width: 200px;
+	height: 200px;
+}
+
+#gunshot {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 15%;
+    right: 22%;
+}
+
+#gunshot2 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+    right: 38%;
+}
+
+#gunshot3 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+	right: 15%;
+}
+
+
+#gunshot4 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+	right: 15%;
+}
+
+#target {
+	height: 180px;
+	width: 180px;
+	background-color: none;
+	background-image: url('images/png/female/Attack (1).png');
+	background-size: 184px 162px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	left: 1.2%;
+	z-index: 1;
+}
+
+#target2 {
+	height: 180px;
+	width: 180px;
+	background-color: none;
+	background-image: url('images/png/male/Dead (1).png');
+	background-size: 184px 162px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	left: 2%;
+	z-index: 1;
+}
+
+#target3 {
+    height: 140px;
+    width: 140px;
+	background-color: none;
+	background-image: url('images/png/male/Attack (8).png');
+	background-size: 148px 148px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	right: 2%;
+	z-index: 1;
+}
+
+#target4 {
+    height: 140px;
+    width: 140px;
+	background-color: none;
+	background-image: url('images/png/female/Attack (4).png');
+	background-size: 148px 148px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	right: 25%;
+	z-index: 1;
+}
+
+#gameStage {
+	height: 700px;
+	width: 1100px;
+	background-color: white;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	background-image: url('https://i.ytimg.com/vi/_60hYyvt9Cs/maxresdefault.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: none;
+}
+
+#score {
+	padding-left: 25px;
+	color: white;
+}
+
+#rock1 {
+    height: 305px;
+    width: 591px;
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	z-index: 10000;
+	overflow: hidden;
+}
+
+#rock2 {
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	z-index: 1001
+}
+
+#rock3 {
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	bottom: 0%;
+	right: 20%;
+	z-index: 1000;
+}
+
+#instructions {
+	font-size: 1.2em;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+audio {
+	display: none;
+}
+iframe {
+	background-color: none;
+}
