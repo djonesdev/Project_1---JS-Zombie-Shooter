@@ -1,0 +1,297 @@
+body {
+	background-color: #333;
+}
+#box {
+	height: 100px;
+	width: 340px;
+	background-color: black;
+	color: white;
+	font-size: 1.3em;
+}
+
+#gameStart {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    height: 50px;
+    width: 280px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 15%;
+    left: 3%;
+}
+
+#gameStart:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#message {
+  background: black;
+  display: none;
+  padding: 10px;
+  width: 320px;
+  height: 600px;
+  border-radius: 3%;
+  color: white;
+  word-spacing: 1px;
+}
+
+#box {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#box:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#infectionStatusContainer{
+  display: inline-block;
+  font-size: 50px;
+  /*margin: 20px;*/
+  width: 500px;
+  height:70px;
+  font-size: 1.2em;
+  padding-left: 150px;
+/*  position: absolute;
+  top: 0%;
+  right: 0%;*/
+}
+
+#infectionStatusContainer h2 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#infectionStatus{
+  display: inline-block;
+  overflow: hidden;
+  width:200px;
+  height: 30px;
+  vertical-align: middle;
+  border: solid black 2px;
+}
+#infectionBar {
+  height: 30px;
+  width: 100px;
+  background: #228B22;
+}
+
+
+#musicButton {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	bottom: 5%;
+
+}
+
+#zombie1 {
+	width: 200px;
+	height: 200px;
+}
+
+#gunshot {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 15%;
+    right: 22%;
+}
+
+#gunshot2 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+    right: 38%;
+}
+
+#gunshot3 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+	right: 15%;
+}
+
+
+#gunshot4 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+	right: 15%;
+}
+
+#gunshot5 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 11%;
+	right: 0%;
+}
+
+#target {
+	height: 180px;
+	width: 180px;
+	background-color: none;
+	background-image: url('images/png/female/Attack (1).png');
+	background-size: 184px 162px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	left: 1.2%;
+	z-index: 1;
+}
+
+#target2 {
+	height: 180px;
+	width: 180px;
+	background-color: none;
+	background-image: url('images/png/male/Dead (1).png');
+	background-size: 184px 162px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	left: 2%;
+	z-index: 1;
+}
+
+#target3 {
+    height: 140px;
+    width: 180px;
+	background-color: none;
+	background-image: url('images/png/male/Attack (8).png');
+	background-size: 148px 148px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 25%;
+	right: 2%;
+	z-index: 1;
+	display: none;	
+}
+
+#target4 {
+    height: 140px;
+    width: 140px;
+	background-color: none;
+	background-image: url('images/png/female/Attack (4).png');
+	background-size: 148px 148px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0%;
+	right: 25%;
+	z-index: 1;
+}
+
+#target5 {
+    height: 110px;
+    width: 110px;
+	background-color: none;
+	background-image: url('images/png/female/Attack (4).png');
+	background-size: 118px 118px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 15%;
+	right: 38%;
+	z-index: 1;
+	display: none;
+}
+
+#gameStage {
+	height: 700px;
+	width: 1000px;
+	background-color: white;
+	position: absolute;
+	top: 2%;
+	right: 6%;
+	background-image: url('images/background.jpg');
+	background-size: 1000px 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#score {
+	padding-left: 25px;
+	color: white;
+	display: inline-block;
+}
+
+#rock1 {
+    height: 205px;
+    width: 591px;
+	position: absolute;
+	bottom: -4.5%;
+	left: -2%;
+	z-index: 10000;
+	overflow: hidden;
+	transform: rotate(-15deg);
+}
+
+#rock2 {
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    bottom: -3%;
+    right: 15%;
+    z-index: 1001;
+    transform: rotate(6deg);
+}
+
+#rock3 {
+	height: 200px;
+    width: 400px;
+    position: absolute;
+    bottom: -9%;
+    right: 32%;
+    z-index: 10000;
+    transform: rotate(-3deg);
+}
+
+#rock4 {
+    position: absolute;
+    bottom: -2%;
+    right: -11%;
+    height: 200px;
+    width: 567px;
+    z-index: 999;
+}
+
+#rock5 {
+	position: absolute;
+	bottom: -2%;
+	left: -5%;
+	height: 200px;
+	width: 250px;
+	z-index: 1000
+}
+
+#instructions {
+	font-size: 1.2em;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+audio {
+	display: none;
+}
+iframe {
+	background-color: none;
+}
