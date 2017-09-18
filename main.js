@@ -1,11 +1,12 @@
  $(function() {
-
+ 	var overrun = 100;
 	var score = 0;
 	var button = $('#box')
 	var elem = $('#message');
 	var count = 0;
 	var gunshot = $('#gunshot');
-
+	infectionLevel = 100;
+	var infectionIncrament = 5;
  // INSTRUCTION PANEL 
 
 // $(function() {
@@ -28,7 +29,19 @@
  		$('audio').stop();
  	});
 
-	$('#gameStart').click(function (e) {
+	$('#gameStart').click(function gameStart (e) {
+
+function adjustInfection(total) {
+	var infectionBar = $('#infectionBar'); 
+  		infectionLevel += total;
+  		infectionBar.css({
+  			width: infectionLevel
+  		});
+}
+
+  interval = setInterval(function(){
+    adjustInfection(infectionIncrament);
+    }, 1000)
 
 // SHOT FUNCTIONS
 
@@ -42,6 +55,7 @@
 		var count = 0;
 		$('#target').click(function(e) {
 			count++;
+			adjustInfection(-10);
 			checkBossActivation()
 				$('#gunshot').show();
 				score += 10;
@@ -56,6 +70,7 @@
 	$(function() {
 		$('#target2').click(function shotZombie2(e) {
 			score += 10;
+			adjustInfection(-10);
 			checkBossActivation()
 				$('#score').text(score);
 				$('#gunshot2').show();
@@ -68,6 +83,7 @@
 	$(function() {
 		$('#target3').click(function(e) {
 			score += 10;
+			adjustInfection(-10);
 			checkBossActivation();
 				$('#score').text(score);
 				$('#gunshot3').show();
@@ -80,6 +96,7 @@
 
 	$('#target4').click(function (e) {
 		score += 10;
+		adjustInfection(-10);
 		checkBossActivation();
 			$('#score').text(score);
 			$('#gunshot4').show();
@@ -90,6 +107,7 @@
 
 	$('#target5').click(function (e) {
 		score += 10;
+		adjustInfection(-10);
 		checkBossActivation();
 			$('#score').text(score);
 			$('#gunshot5').show();
@@ -101,8 +119,15 @@
 	$('#bossTarget').click(function (e) {
 		$('#gunshot6').show();
 		count++;
+		if (count === 3) {
+			$('#gunshot7').show();
+		}
+		if (count === 5) {
+			$('#gunshot8').show();
+		}
 		if (count === 10) {
 			score += 1000;
+			adjustInfection(-100);
 			$('#score').text(score);
 			$('#bossTarget').fadeOut();
 		};
