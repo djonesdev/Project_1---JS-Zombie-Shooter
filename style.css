@@ -27,6 +27,7 @@ body {
     color: white;
 }
 
+
 #message {
   background: black;
   display: none;
@@ -48,6 +49,8 @@ body {
     color: white;
 }
 
+/*OVERRUN BAR*/
+
 #infectionStatusContainer{
   display: inline-block;
   font-size: 50px;
@@ -56,6 +59,7 @@ body {
   height:70px;
   font-size: 1.2em;
   padding-left: 150px;
+  color: white;
 /*  position: absolute;
   top: 0%;
   right: 0%;*/
@@ -93,6 +97,8 @@ body {
 	width: 200px;
 	height: 200px;
 }
+
+/*GUNSHOT STYLING*/
 
 #gunshot {
 	width: 80px;
@@ -139,6 +145,17 @@ body {
     top: 11%;
 	right: 0%;
 }
+
+#gunshot6 {
+	display: none;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	top: 18%;
+    left: 34%;
+}
+
+/*ZOMBIE SPRITES*/
 
 #target {
 	height: 180px;
@@ -207,6 +224,17 @@ body {
 	display: none;
 }
 
+#bossTarget {
+	height: 250px;
+	width: 250px;
+	background-color: none;
+	background-image: url('images/BOSS_ZOMBIE.png');
+	background-size: 230px 230px;
+	background-repeat: no-repeat;
+	display: none;
+}
+/*ENVIROMENT*/
+
 #gameStage {
 	height: 700px;
 	width: 1000px;
@@ -219,6 +247,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	cursor: crosshair;
 }
 
 #score {
@@ -291,7 +320,4 @@ body {
 
 audio {
 	display: none;
-}
-iframe {
-	background-color: none;
 }
