@@ -5,8 +5,8 @@
 	var elem = $('#message');
 	var count = 0;
 	var gunshot = $('#gunshot');
-	var infectionLevel = 100;
-	var infectionIncrament = 6;
+	var overrun = 100;
+	var overrunIncrament = 6;
 
  // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
@@ -20,17 +20,17 @@
 
 	$('#gameStart').click(function gameStart (e) {
 		$('#message').fadeOut();
-		
-function adjustInfection(total) {
-	var infectionBar = $('#infectionBar'); 
-  		infectionLevel += total;
-  		infectionBar.css({
-  			width: infectionLevel
+
+function adjustOverrun(total) {
+	var overrunBar = $('#overrunBar'); 
+  		overrun += total;
+  		overrunBar.css({
+  			width: overrun
   		});
 }
 
   interval = setInterval(function(){
-    adjustInfection(infectionIncrament);
+    adjustOverrun(overrunIncrament);
     }, 1000)
 
 // SHOT FUNCTIONS
@@ -46,8 +46,9 @@ function adjustInfection(total) {
 		var count = 0;
 		$('#target').click(function(e) {
 			count++;
-			adjustInfection(-10);
-			checkBossActivation()
+			adjustOverrun(-10);
+			checkBossActivation();
+			levelUp();
 				$('#gunshot').show();
 				score += 10;
 				$('#score').html(score);
@@ -61,8 +62,9 @@ function adjustInfection(total) {
 	$(function() {
 		$('#target2').click(function shotZombie2(e) {
 			score += 10;
-			adjustInfection(-10);
+			adjustOverrun(-10);
 			checkBossActivation()
+			levelUp();
 				$('#score').text(score);
 				$('#gunshot2').show();
 				setTimeout(function() {
@@ -74,8 +76,9 @@ function adjustInfection(total) {
 	$(function() {
 		$('#target3').click(function(e) {
 			score += 10;
-			adjustInfection(-10);
+			adjustOverrun(-10);
 			checkBossActivation();
+			levelUp();
 				$('#score').text(score);
 				$('#gunshot3').show();
 				setTimeout(function() {
@@ -87,8 +90,9 @@ function adjustInfection(total) {
 
 	$('#target4').click(function (e) {
 		score += 10;
-		adjustInfection(-10);
+		adjustOverrun(-10);
 		checkBossActivation();
+		levelUp();
 			$('#score').text(score);
 			$('#gunshot4').show();
 			setTimeout(function (e) {
@@ -98,8 +102,9 @@ function adjustInfection(total) {
 
 	$('#target5').click(function (e) {
 		score += 10;
-		adjustInfection(-10);
+		adjustOverrun(-10);
 		checkBossActivation();
+		levelUp();
 			$('#score').text(score);
 			$('#gunshot5').show();
 			setTimeout(function (e) {
@@ -118,17 +123,46 @@ function adjustInfection(total) {
 		}
 		if (count === 10) {
 			score += 1000;
-			adjustInfection(-100);
+			adjustOverrun(-100);
 			$('#score').text(score);
 			$('#bossTarget').fadeOut();
 		};
 	});
 
+	$('#bossTarget2').click(function (e) {
+		$('#gunshot9').show();
+		count = 0;
+		count++;
+		if (count === 2) {
+			$('#gunshot10').show();
+		}
+		if (count === 3) {
+			$('#gunshot11').show();
+		}
+		if (count === 5) {
+			$('#gunshot12').show();
+		}
+		if (count === 7) {
+			score += 1000
+			adjustOverrun(-100);
+			$('#score').text(score);
+			$('#bossTarget2').fadeOut();
+		};
+	});
+
 	function checkBossActivation () {
 	 if ($('#score').html() === '200') {
-	 	infectionLevel += 30;
+	 	overrun += 30;
 	 	$('#bossTarget').fadeIn()
 	 };
+	 if ($('#score').html() === '1500') {
+	 	$('#bossTarget2').fadeIn()
+	 };
+	};
+
+	function levelUp () {
+		if($('#score').html() >= '1000')
+		var	overrunIncrament = 30;
 	}
 
 // ANIMATION LOOPS
@@ -160,24 +194,6 @@ function adjustInfection(total) {
 			});
 	}, 7000);
 
-	// $(function animateLoop4(e) {
-	//  	$('#target4').animate({
-	//  		bottom: '20%'
-	//  	}, 500)
-	//  	.animate({
-	//  		right: '20%',
-	//  	}, 2000);
-	//  	$('#target4').fadeOut().delay(1000);
-	//  	$('#target4').animate({
-	//  		right: '5%'
-	//  	});
-	//  	$('#target4').fadeIn().delay(500)
-	//  		$(function () {
-	//  			animateLoop4();
-	//  		});
-
-	// }); 
-
 	setInterval(function animateLoop4(e) {
 		$('#target4').animate({
 			bottom: '20%'
@@ -198,11 +214,11 @@ function adjustInfection(total) {
 		$('#target5').delay(2000).slideDown();
 	}, 2000);
 
-	setInterval(function checkInfection (e) {
-		if (infectionLevel >= 200) {
+	setInterval(function checkOverrun (e) {
+		if (overrun >= 200) {
 			$('#gameOver').show()
 		};
-		if (infectionLevel <= 0) {
+		if (overrun <= 0) {
 			$('#winScreen').show()
 		};
 	}, 1000);
@@ -211,8 +227,8 @@ function adjustInfection(total) {
 
 			$('#gameOver').hide();
 			$('#winScreen').hide()
-			infectionLevel = 100;
-			var infectionIncrament = 5;
+			overrun = 100;
+			var overrunIncrament = 5;
 			$('#score').html(0)
 			score = 0;
 

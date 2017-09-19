@@ -150,7 +150,7 @@ body {
   vertical-align: middle;
   border: solid black 2px;
 }
-#infectionBar {
+#overrunBar {
   height: 30px;
   width: 100px;
   background: #228B22;
@@ -223,7 +223,7 @@ body {
 	height: 80px;
 	width: 80px;
 	position: absolute;
-	top: 18%;
+	top: 40%;
     left: 34%;
 }
 
@@ -233,7 +233,7 @@ body {
 	width: 80px;
 	position: absolute;
     top: 27%;
-    left: 38%;
+    left: 45%;
 }
 
 #gunshot8 {
@@ -242,8 +242,45 @@ body {
 	width: 80px;
 	position: absolute;
 	top: 18%;
-    left: 30%;
+    left: 22%;
 }
+
+#gunshot9 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 4%;
+    right: 28%;
+}
+
+#gunshot10 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 15%;
+    right: 40%;
+}
+
+#gunshot11 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 10%;
+    left: 8%;
+}
+
+#gunshot12 {
+	width: 80px;
+	height: 80px;
+	display: none;
+	position: absolute;
+    top: 39%;
+    right: 22%;
+}
+
 /*ZOMBIE SPRITES*/
 
 #target {
@@ -323,6 +360,22 @@ body {
 	background-size: 230px 230px;
 	background-repeat: no-repeat;
 	display: none;
+	position: absolute;
+	top: 12%;
+	left: 25%;
+}
+
+#bossTarget2 {
+    height: 300px;
+    width: 300px;
+    background-color: none;
+    background-image: url(images/boss2.png);
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+     display: none; 
+    position: absolute;
+    top: 29%;
+    right: 18%;
 }
 
 
