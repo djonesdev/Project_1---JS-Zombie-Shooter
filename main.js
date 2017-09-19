@@ -6,7 +6,7 @@
 	var count = 0;
 	var gunshot = $('#gunshot');
 	var infectionLevel = 100;
-	var infectionIncrament = 8;
+	var infectionIncrament = 6;
 
  // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
