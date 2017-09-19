@@ -19,7 +19,8 @@
  	});
 
 	$('#gameStart').click(function gameStart (e) {
-
+		$('#message').fadeOut();
+		
 function adjustInfection(total) {
 	var infectionBar = $('#infectionBar'); 
   		infectionLevel += total;
