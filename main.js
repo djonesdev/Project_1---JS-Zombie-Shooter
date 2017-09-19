@@ -5,21 +5,10 @@
 	var elem = $('#message');
 	var count = 0;
 	var gunshot = $('#gunshot');
-	infectionLevel = 100;
+	var infectionLevel = 100;
 	var infectionIncrament = 5;
- // INSTRUCTION PANEL 
 
-// $(function() {
-//   var count = 0;
-  
-//   $('#box').click(function(e) {
-//     count++;
-    
-//     if(count == 5) {
-//       $('#message').show();
-//     }
-//   });
-// });
+ // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
 	$('#box').click(function(e) {
  		$('#message').fadeToggle();
@@ -196,9 +185,25 @@ function adjustInfection(total) {
 		$('#target5').delay(2000).slideDown();
 	}, 2000);
 
-	 // if ($('#score').html() === '200') {
-	 // 	$('#bossTarget').show()
-	 // };
+	(function gameOver (e) {
+		if (infectionLevel.total() >= 200) {
+			$('#gameOver').show()
+		};
+	});
+
+	// $('#playAgain').click(function playAgain (e) {
+	// 	 	var overrun = 100;
+	// 		var score = 0;
+	// 		var button = $('#box')
+	// 		var elem = $('#message');
+	// 		var count = 0;
+	// 		var gunshot = $('#gunshot');
+	// 		infectionLevel = 100;
+	// 		var infectionIncrament = 5;
+	// 		gameStart();
+	// 	};
+	// });
+
 });
 });
-// });
+
