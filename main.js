@@ -6,7 +6,7 @@
 	var count = 0;
 	var gunshot = $('#gunshot');
 	var infectionLevel = 100;
-	var infectionIncrament = 5;
+	var infectionIncrament = 8;
 
  // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
@@ -66,7 +66,7 @@ function adjustInfection(total) {
 				$('#gunshot2').show();
 				setTimeout(function() {
 					$('#gunshot2').hide();
-				},2500);
+				}, 3000);
 		});
 	});
 
@@ -201,11 +201,15 @@ function adjustInfection(total) {
 		if (infectionLevel >= 200) {
 			$('#gameOver').show()
 		};
+		if (infectionLevel <= 0) {
+			$('#winScreen').show()
+		};
 	}, 1000);
 
-	$('#playAgain').click(function playAgain (e) {
+	$('.playAgain').click(function playAgain (e) {
 
 			$('#gameOver').hide();
+			$('#winScreen').hide()
 			infectionLevel = 100;
 			var infectionIncrament = 5;
 			$('#score').html(0)

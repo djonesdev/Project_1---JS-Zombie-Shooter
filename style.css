@@ -63,7 +63,20 @@ body {
 	display: none;
 }
 
-#playAgain {
+#winScreen {
+	height: 700px;
+	width: 1000px;
+	background-color: black;
+	z-index: 10000000000000;
+	text-align: center;
+	position: absolute;
+	right: 0%;
+	font-size: 1.8em;
+	color: white;
+	display: none;
+}
+
+.playAgain {
 	background-color: black;
 	color: white;
 	height: 150px;
@@ -75,7 +88,7 @@ body {
 	transition-duration: 0.4s;	
 }
 
-#playAgain:hover {
+.playAgain:hover {
 	background-color: red;
 }
 
