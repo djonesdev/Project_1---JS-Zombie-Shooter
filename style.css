@@ -242,6 +242,7 @@ body {
 	right: 2%;
 	z-index: 1;
 	display: none;	
+	transform: rotateY(180deg);
 }
 
 #target4 {
@@ -269,6 +270,7 @@ body {
 	right: 38%;
 	z-index: 1;
 	display: none;
+	transform: rotateY(180deg)
 }
 
 #bossTarget {
@@ -280,6 +282,8 @@ body {
 	background-repeat: no-repeat;
 	display: none;
 }
+
+
 /*ENVIROMENT*/
 
 #gameStage {
@@ -297,10 +301,19 @@ body {
 	cursor: crosshair;
 }
 
+#shell {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 2%;
+	top: 1%;
+}
+
 #score {
 	padding-left: 25px;
 	color: white;
 	display: inline-block;
+	margin-right: 10px;
 }
 
 #rock1 {

@@ -37,7 +37,8 @@ function adjustInfection(total) {
 	$('#gameStage').on('click', function (event) {
         var audio = new Audio('audio/shotgun-mossberg590-RA_The_Sun_God-451502290.mp3');
 
-        audio.play();    
+        audio.play(); 
+        $('#shell').hide()   
     });
 
 	$(function() {
@@ -124,7 +125,8 @@ function adjustInfection(total) {
 
 	function checkBossActivation () {
 	 if ($('#score').html() === '200') {
-	 	$('#bossTarget').show()
+	 	infectionLevel += 30;
+	 	$('#bossTarget').fadeIn()
 	 };
 	}
 
@@ -157,53 +159,61 @@ function adjustInfection(total) {
 			});
 	}, 7000);
 
-	$(function animateLoop4(e) {
-	 	$('#target4').animate({
-	 		bottom: '20%'
-	 	}, 500)
-	 	.animate({
-	 		right: '20%',
-	 	}, 2000);
-	 	$('#target4').fadeOut().delay(1000);
-	 	$('#target4').animate({
-	 		right: '5%'
-	 	});
-	 	$('#target4').fadeIn().delay(500)
-	 		$(function () {
-	 			animateLoop4();
-	 		});
+	// $(function animateLoop4(e) {
+	//  	$('#target4').animate({
+	//  		bottom: '20%'
+	//  	}, 500)
+	//  	.animate({
+	//  		right: '20%',
+	//  	}, 2000);
+	//  	$('#target4').fadeOut().delay(1000);
+	//  	$('#target4').animate({
+	//  		right: '5%'
+	//  	});
+	//  	$('#target4').fadeIn().delay(500)
+	//  		$(function () {
+	//  			animateLoop4();
+	//  		});
 
-	}); 
+	// }); 
+
+	setInterval(function animateLoop4(e) {
+		$('#target4').animate({
+			bottom: '20%'
+		}, 4000)
+			.animate({
+				right: '20%',
+				bottom: '0%'
+			});
+	}, 3000);
 
 	setInterval(function animateLoop3(e) {
 	 	$('#target3').delay(3000).fadeIn();
 		$('#target3').delay(2500).fadeOut();
-	}, 3000);
+	}, 10000);
 
 	setInterval(function (e) {
 		$('#target5').delay(2000).fadeOut()
 		$('#target5').delay(2000).slideDown();
 	}, 2000);
 
-	(function gameOver (e) {
-		if (infectionLevel.total() >= 200) {
+	setInterval(function checkInfection (e) {
+		if (infectionLevel >= 200) {
 			$('#gameOver').show()
 		};
+	}, 1000);
+
+	$('#playAgain').click(function playAgain (e) {
+
+			$('#gameOver').hide();
+			infectionLevel = 100;
+			var infectionIncrament = 5;
+			$('#score').html(0)
+			score = 0;
+
+		});
 	});
 
-	// $('#playAgain').click(function playAgain (e) {
-	// 	 	var overrun = 100;
-	// 		var score = 0;
-	// 		var button = $('#box')
-	// 		var elem = $('#message');
-	// 		var count = 0;
-	// 		var gunshot = $('#gunshot');
-	// 		infectionLevel = 100;
-	// 		var infectionIncrament = 5;
-	// 		gameStart();
-	// 	};
-	// });
+});
 
-});
-});
 
