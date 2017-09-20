@@ -65,7 +65,7 @@
         	$('#shell5').hide();
         }
         else if (shotCount === 6) {
-        	$('#shot6').hide();
+        	$('#shell6').hide();
         	shotCount = 0;
         }
     };
