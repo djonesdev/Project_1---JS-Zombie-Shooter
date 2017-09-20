@@ -40,9 +40,8 @@
         var audio = new Audio('audio/shotgun-mossberg590-RA_The_Sun_God-451502290.mp3');
         ammo --;
         reloadCount();
-        // reload();
         audio.play(); 
-        $('#shell').hide()   
+        $('.shell').hide(this)   
     });
 
 	function reloadCount (e) {
@@ -51,21 +50,16 @@
 			$('#gameStage').css({
 				pointerEvents: 'none'
 			});
-		$('#gameStage').delay(5000).queue(function reload2 (e) {
+			setTimeout(function reload2 (e) {
 			console.log('yataaaah')
 			$('#gameStage').css({
 				pointerEvents: ''
 			});
 
-		});
+		}, 4000);
 		};
 	};
 
-	// function reload (e) {
-	// 	if (ammo === 0) {
-	// 	console.log('reload')
-	// }
-	// }
 
 	$(function() {
 		var count = 0;
