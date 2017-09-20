@@ -66,6 +66,7 @@
         }
         else if (shotCount === 6) {
         	$('#shot6').hide();
+        	shotCount = 0;
         }
     };
 
@@ -76,7 +77,6 @@
 				pointerEvents: 'none'
 			});
 			setTimeout(function reload2 (e) {
-			console.log('yataaaah')
 			$('#gameStage').css({
 				pointerEvents: ''
 			});
