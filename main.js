@@ -55,8 +55,9 @@
 			$('#gameStage').css({
 				pointerEvents: ''
 			});
+			$('.shell').fadeIn()
 
-		}, 4000);
+		}, 3000);
 		};
 	};
 
