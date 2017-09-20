@@ -276,6 +276,9 @@
 			var overrunIncrament = 5;
 			$('#score').html(0)
 			score = 0;
+			animateLoop1();
+			animateLoop3();
+			animateLoop4();
 
 		});
 	});
