@@ -8,6 +8,8 @@
 	var overrun = 100;
 	var overrunIncrament = 6;
 	var ammo = 6;
+	var $shell = $('.shell')
+	shotCount = 0
 
  // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
@@ -28,7 +30,7 @@
   			overrunBar.css({
   				width: overrun
   			});
-}
+};
 
   interval = setInterval(function(){
     adjustOverrun(overrunIncrament);
@@ -39,10 +41,33 @@
 	$('#gameStage').on('click', function (event) {
         var audio = new Audio('audio/shotgun-mossberg590-RA_The_Sun_God-451502290.mp3');
         ammo --;
+        shellHide();
         reloadCount();
         audio.play(); 
-        $('.shell').hide(this)   
     });
+
+    function shellHide (e) {
+    	shotCount++;
+
+        if (shotCount === 1) {
+        	$('#shell1').hide();
+        }
+        else if (shotCount === 2) {
+        	$('#shell2').hide();
+        }
+        else if (shotCount === 3) {
+        	$('#shell3').hide();
+        }
+        else if (shotCount === 4) {
+        	$('#shell4').hide();
+        }
+        else if (shotCount === 5) {
+        	$('#shell5').hide();
+        }
+        else if (shotCount === 6) {
+        	$('#shot6').hide();
+        }
+    };
 
 	function reloadCount (e) {
 		if (ammo === 0) {
@@ -57,7 +82,7 @@
 			});
 			$('.shell').fadeIn()
 
-		}, 3000);
+		}, 2500);
 		};
 	};
 
