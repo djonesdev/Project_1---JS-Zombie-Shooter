@@ -7,6 +7,7 @@
 	var gunshot = $('#gunshot');
 	var overrun = 100;
 	var overrunIncrament = 6;
+	var ammo = 6;
 
  // INSTRUCTION PANEL// AUDIO// GAME START// INFECTION BAR 
 
@@ -21,12 +22,12 @@
 	$('#gameStart').click(function gameStart (e) {
 		$('#message').fadeOut();
 
-function adjustOverrun(total) {
-	var overrunBar = $('#overrunBar'); 
-  		overrun += total;
-  		overrunBar.css({
-  			width: overrun
-  		});
+	function adjustOverrun(total) {
+		var overrunBar = $('#overrunBar'); 
+  			overrun += total;
+  			overrunBar.css({
+  				width: overrun
+  			});
 }
 
   interval = setInterval(function(){
@@ -37,14 +38,38 @@ function adjustOverrun(total) {
 
 	$('#gameStage').on('click', function (event) {
         var audio = new Audio('audio/shotgun-mossberg590-RA_The_Sun_God-451502290.mp3');
-
+        ammo --;
+        reloadCount();
+        // reload();
         audio.play(); 
         $('#shell').hide()   
     });
 
+	function reloadCount (e) {
+		if (ammo === 0) {
+			ammo = 6;
+			$('#gameStage').css({
+				pointerEvents: 'none'
+			});
+		$('#gameStage').delay(5000).queue(function reload2 (e) {
+			console.log('yataaaah')
+			$('#gameStage').css({
+				pointerEvents: ''
+			});
+
+		});
+		};
+	};
+
+	// function reload (e) {
+	// 	if (ammo === 0) {
+	// 	console.log('reload')
+	// }
+	// }
+
 	$(function() {
 		var count = 0;
-		$('#target').click(function(e) {
+		$('#target').click(function shotZombie1(e) {
 			count++;
 			adjustOverrun(-10);
 			checkBossActivation();
@@ -74,7 +99,7 @@ function adjustOverrun(total) {
 	});
 
 	$(function() {
-		$('#target3').click(function(e) {
+		$('#target3').click(function shotZombie3(e) {
 			score += 10;
 			adjustOverrun(-10);
 			checkBossActivation();
@@ -88,7 +113,7 @@ function adjustOverrun(total) {
 		});
 	});
 
-	$('#target4').click(function (e) {
+	$('#target4').click(function shotZombie4(e) {
 		score += 10;
 		adjustOverrun(-10);
 		checkBossActivation();
@@ -100,7 +125,7 @@ function adjustOverrun(total) {
 			}, 2500);
 	});
 
-	$('#target5').click(function (e) {
+	$('#target5').click(function shotZombie5(e) {
 		score += 10;
 		adjustOverrun(-10);
 		checkBossActivation();
@@ -112,7 +137,7 @@ function adjustOverrun(total) {
 			}, 3000);
 	});
 
-	$('#bossTarget').click(function (e) {
+	$('#bossTarget').click(function shotZombie6(e) {
 		$('#gunshot6').show();
 		count++;
 		if (count === 3) {
@@ -161,8 +186,8 @@ function adjustOverrun(total) {
 	};
 
 	function levelUp () {
-		if($('#score').html() >= '1000')
-		var	overrunIncrament = 30;
+		if($('#score').html() === '1000')
+		console.log('snoop')
 	}
 
 // ANIMATION LOOPS
