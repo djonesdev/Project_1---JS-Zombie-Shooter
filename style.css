@@ -140,6 +140,7 @@ body {
 #infectionStatusContainer h2 {
   display: inline-block;
   margin-right: 10px;
+  margin-left: 112px;
 }
 
 #infectionStatus{
