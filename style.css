@@ -20,7 +20,7 @@ body {
     font-size: 1.6em;
     position: absolute;
     bottom: 10%;
-    left: 35%;
+    left: 34%;
 }
 
 #gameStart:hover {
@@ -105,6 +105,62 @@ body {
 	right: 28%;
 }
 
+#gameOver-h {
+	position: absolute;
+	right: 38%;
+}
+
+#gameOver-p {
+	position: absolute;
+    right: 27%;
+    top: 24%;
+}
+
+#gameOver-z1 {
+    height: 32%;
+    width: 24%;
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+    transform: rotateY(180deg);
+}
+
+#gameOver-z2 {
+    height: 32%;
+    width: 21%;
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+}
+
+#winScreen-h {
+	position: absolute;
+    top: 1.5%;
+    right: 32%;
+}
+
+#winScreen-p {
+	position: absolute;
+    top: 18%;
+}
+
+#winZombie1 {
+	height: 32%;
+	width: 24%;
+	position: absolute;
+	bottom: 10%;
+	right: 2%;
+	transform: rotateY(180deg);
+}
+
+#winZombie2 {
+	height: 32%;
+	width: 24%;
+	position: absolute;
+	bottom: 10%;
+	left: 2%;
+}
+
 .playAgain {
 	background-color: black;
 	color: white;
@@ -112,8 +168,6 @@ body {
 	width: 400px;
 	font-size: 1.4em;
 	position: absolute;
-	/*bottom: 25%;*/
-	/*left: 33%;*/
 	transition-duration: 0.4s;	
 }
 
@@ -126,15 +180,11 @@ body {
 #infectionStatusContainer{
   display: inline-block;
   font-size: 50px;
-  /*margin: 20px;*/
   width: 500px;
   height:70px;
   font-size: 1.2em;
   padding-left: 150px;
   color: white;
-/*  position: absolute;
-  top: 0%;
-  right: 0%;*/
 }
 
 #infectionStatusContainer h2 {

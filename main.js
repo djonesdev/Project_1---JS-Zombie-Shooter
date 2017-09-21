@@ -108,7 +108,7 @@
 		$('#target2').click(function shotZombie2(e) {
 			score += 10;
 			adjustOverrun(-10);
-			checkBossActivation()
+			checkBossActivation();
 			levelUp();
 				$('#score').text(score);
 				$('#gunshot2').show();
@@ -200,15 +200,11 @@
 	 	overrun += 30;
 	 	$('#bossTarget').fadeIn()
 	 };
-	 if ($('#score').html() === '1500') {
+	 if ($('#score').html() === '1200') {
 	 	$('#bossTarget2').fadeIn()
 	 };
 	};
 
-	function levelUp () {
-		if($('#score').html() === '1000')
-		console.log('snoop')
-	}
 
 // ANIMATION LOOPS
 
@@ -230,7 +226,7 @@
 });
 
 
-	setInterval(function (e) {
+	setInterval(function animateLoop2(e) {
 		$('#target').animate({
 			bottom: '20%'
 		}, 4000)
@@ -277,10 +273,20 @@
 			$('#score').html(0)
 			score = 0;
 			animateLoop1();
+			animateLoop2();		
 			animateLoop3();
 			animateLoop4();
 
 		});
+
+	function levelUp(e) {
+		if ($('#score').html() === '500') {
+			window.overrunIncrament = 50;
+		}
+		if ($('#score').html() === '1000') {
+			window.overrunIncrament = 50;
+		}
+	}
 	});
 
 });
