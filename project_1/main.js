@@ -154,7 +154,7 @@
 			$('#gunshot5').show();
 			setTimeout(function (e) {
 				$('#gunshot5').hide();
-			}, 3000);
+			}, 2200);
 	});
 
 	$('#bossTarget').click(function shotZombie6(e) {
