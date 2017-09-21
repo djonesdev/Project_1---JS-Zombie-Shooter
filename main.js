@@ -176,20 +176,23 @@
 
 	$('#bossTarget2').click(function (e) {
 		$('#gunshot9').show();
-		count = 0;
 		count++;
+		console.log(count)
 		if (count === 2) {
 			$('#gunshot10').show();
+			console.log('2')
 		}
 		if (count === 3) {
 			$('#gunshot11').show();
+			console.log('3')
 		}
 		if (count === 5) {
 			$('#gunshot12').show();
+			console.log('5')
 		}
 		if (count === 7) {
 			score += 1000
-			adjustOverrun(-100);
+			adjustOverrun(-200);
 			$('#score').text(score);
 			$('#bossTarget2').fadeOut();
 		};
@@ -200,7 +203,7 @@
 	 	overrun += 30;
 	 	$('#bossTarget').fadeIn()
 	 };
-	 if ($('#score').html() === '1200') {
+	 if ($('#score').html() === '200') {
 	 	$('#bossTarget2').fadeIn()
 	 };
 	};
@@ -281,10 +284,10 @@
 
 	function levelUp(e) {
 		if ($('#score').html() === '500') {
-			window.overrunIncrament = 50;
+			overrunIncrament = 10;
 		}
-		if ($('#score').html() === '1000') {
-			window.overrunIncrament = 50;
+		if ($('#score').html() === '1500') {
+			window.overrunIncrament = 15;
 		}
 	}
 	});
