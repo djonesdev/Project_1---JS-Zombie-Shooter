@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src='main.js'></script>
+	<title>Zombie survival</title>
+	
+	</head>
+<body>
+<button id="box" class="noSelect">How to play</button>
+
+
+<div id="gameStage">
+	<div id="message">
+	<h3 id="instruc-h">Intructions</h3>
+	<ul id="instructions">
+		<li>Welcome to Zombie Survival! The worst thing imaginable has happened, a zombie apocolypse! On a supply run your group has been attacked on your way back and you must hold them back before they overrun your camp!</li>
+		<li>Shooting - Simply click to fire your weapon! Watch where you fire though, ammo is in short supply and misses may cost you precious lives! Also beware that some zombies may require more than one shot to put down for good!</li>
+		<li>Scoring - Each regular zombie is worth 10 points, try and get as many points as you can!</li>
+		<li> That's it, fire away and protect your camp!</li>
+	</ul>
+	<button id="gameStart" class="noSelect">Play Game</button>
+</div>
+	<img src="images/shell.png" class="noSelect shell" id="shell1">
+	<img src="images/shell.png" class="noSelect shell" id="shell2">
+	<img src="images/shell.png" class="noSelect shell" id="shell3">
+	<img src="images/shell.png" class="noSelect shell" id="shell4">
+	<img src="images/shell.png" class="noSelect shell" id="shell5">
+	<img src="images/shell.png" class="noSelect shell" id="shell6">
+	<h2 id="score" class="noSelect">SCORE</h2>
+	<div id='infectionStatusContainer' class="noSelect">
+    	<h2 class="noSelect">OVERRUN:</h2>
+    	<div id='infectionStatus'><div id='overrunBar'></div></div>
+	<img src="images/rock-576684_1280.png" id="rock1" class="noSelect">
+	<img src="images/rock-576683_1280.png" id="rock5" class="noSelect">
+	<img src="images/rock-576682_1280.png" id="rock2" class="noSelect">
+	<img src="images/Seamless-design-of-rocks/pile-576447_1280.png" id="rock3" class="noSelect">
+	<img src="images/Seamless-design-of-rocks/pile-576447_1280.png" id="rock4" class="noSelect">
+	<div id="target" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot" class="noSelect">
+	</div>
+	<div id="target2" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot2" class="noSelect">
+	</div>
+	<div id="target3" class='noSelect'>
+		<img src="images/bullet-hole-hi.png" id="gunshot3" class="noSelect">
+	</div>
+	<div id="target4" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot4" class="noSelect">
+	</div>
+	<div id="target5" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot5" class="noSelect">
+	</div>
+	<div id="bossTarget" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot6" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot7" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot8" class="noSelect">
+	</div>
+	<div id="bossTarget2" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot9" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot10" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot11" class="noSelect">
+		<img src="images/bullet-hole-hi.png" id="gunshot12" class="noSelect">
+	</div>
+	<div id="gameOver">
+		<h2 id="gameOver-h">GAME OVER</h2>
+		<p id="gameOver-p">You have been overrun! Game over.<br> Would you like to play again?</p>
+		<button class="playAgain" id="gameOverButt">PLAY AGAIN</button>
+		<img src="images/png/female/Attack (3).png" id="gameOver-z1">
+		<img src="images/png/male/Attack (3).png" id="gameOver-z2">
+	</div>
+	<div id="winScreen">
+		<h2 id="winScreen-h"> YOU SURVIVED</h2>
+		<p id="winScreen-p">You live to see another day, return to camp with your well earned supplies. <br> Would you like to play again?</p>
+		<button class="playAgain" id="winButton">PLAY AGAIN</button>
+		<img src="images/png/female/Dead (6).png" id="winZombie1">
+		<img src="images/png/male/Dead (6).png" id="winZombie2">
+	</div>
+</div>
+
+<audio src="audio/Closing-In-2_Looping.mp3" autoplay="true" loop="true"></audio>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg" id="musicButton">
+
+
+</body>
+</html>
