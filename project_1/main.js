@@ -203,7 +203,7 @@
 	 	overrun += 30;
 	 	$('#bossTarget').fadeIn()
 	 };
-	 if ($('#score').html() === '200') {
+	 if ($('#score').html() === '1200') {
 	 	$('#bossTarget2').fadeIn()
 	 };
 	};
